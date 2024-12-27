@@ -1,0 +1,42 @@
+# Descarga parcial de Git
+.git/index.lock
+
+# Archivos del entorno virtual python3
+lib/
+lib64/
+
+# Directorios de depuración
+/debug/
+/tmp/
+*.log
+*.old
+
+# Archivos temporales de edición
+*.swp
+.DS_Store
+
+# Archivos de respaldo
+*~
+
+# Archivos de caché
+npm-cache/
+yarn-cache/
+
+# Archivos de entorno
+.env
+.env.local
+
+# Archivos de configuración de IDE
+.idea/
+.vscode/
+
+# Archivos compilados
+/build/
+/dist/
+
+# Archivos de documentación generados
+docs/_build/
+
+# Archivos de base de datos
+db.sqlite
+*.sqlite3
