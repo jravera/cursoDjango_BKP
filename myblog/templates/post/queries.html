@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Obtengo todos los autores cuyo nombre contiene 'yes'</h2>
+    <ul>
+        {% for item in nameHasYes %}
+            <li>{{item.name}} </li>
+        {% endfor %}
+    </ul>
+
+    <h2>Obtengo todos los id menores o iguales a 15</h2>
+    <ul>
+        {% for item in idMenorA15 %}
+            <li>{{item.id}} ||| {{item.email}}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Elementos ordenados por eMail</h2>
+    <ul>
+        {% for item in autoresXEmail %}
+            <li>{{item.email}}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Obtengo 10 autores luego de los primeros 5</h2>
+    <ul>
+        {% for item in rangoOffset %}
+            <li>{{item.name}} | | | ({{item.email}})</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Obtengo los 10 primeros autores</h2>
+    <ul>
+        {% for item in rangoLimit %}
+            <li>{{item.name}} | | | ({{item.email}})</li>
+        {% endfor %}
+    </ul>
+
+
+    <h2>Obtrengo un unico autor filtrado por id</h2>
+    <p> {{unautor.name}} --- {{unautor.email}} </p>
+
+    <h2>Buscar autores donde email = amylove@example.com</h2>
+    <ul>
+        {% for item in filtrados %}
+            <li>{{item.name}} | &nbsp;&nbsp;&nbsp; ({{item.email}})</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Lista de todos los autores</h2>
+    <ul>
+        {% for autores in autores %}
+            <li>{{autores.name}} &nbsp;&nbsp;&nbsp; , ({{autores.email}})</li>
+        {% endfor %}
+    </ul>
+    <h2>Total de autores: {{autores|length}} </h2>
+</body>
+</html>
