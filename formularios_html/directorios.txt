@@ -1,0 +1,27 @@
+.
+├── db.sqlite3
+├── directorios.txt
+├── formularios_html
+│   ├── asgi.py
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── settings.cpython-311.pyc
+│   │   ├── urls.cpython-311.pyc
+│   │   ├── views.cpython-311.pyc
+│   │   └── wsgi.cpython-311.pyc
+│   ├── settings.py
+│   ├── urls.py
+│   ├── views.py
+│   └── wsgi.py
+├── manage.py
+└── templates
+    ├── form.html
+    ├── forms
+    │   ├── contacto.html
+    │   └── create.html
+    ├── postform.html
+    ├── postsuccess.html
+    └── success.html
+
+4 directories, 20 files

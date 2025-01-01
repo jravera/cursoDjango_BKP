@@ -1,0 +1,7 @@
+<form action="{% url 'postgoal' %}" method="post">
+
+    {% CSRF_token %}
+    <input type="text" name="info" placeholder="Mete material aqui....">
+    <input type="submit" value="Enviar">
+
+</form>
