@@ -8,9 +8,16 @@
 <body>
     <h1>Formularios a trav&eacute;s de clases</h1>   
     <hr>
-    <form>
-        {{ comment_form }}
-        <input type='submit' value='enviar'>
-    </form> 
+    <table>
+        <!-- <form action='{% url "goal" %}' method='GET'>       (EJEMPLO CON GET) -->
+        <form action="{% url 'goal' %}" method='POST'>      <!-- (EJEMPLO CON POST)-->
+
+            <!-- {{ comment_form.as_p }}  Inserta <p></p> en cada campo -->
+            {% csrf_token %}
+            {{ comment_form.as_table }}
+            <input type='submit' value='enviar'> <!-- Revisar el boton sale antes que los campos -->
+        
+        </form>
+    </table>
 </body>
 </html>
