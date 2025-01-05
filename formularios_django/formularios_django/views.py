@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http      import HttpResponse
-from .forms           import CommentForm
+from .forms           import CommentForm, ContactForm
 
 def form(request):
     comment_form = CommentForm({'name':'Federico', 'url':'http://google.com','comment':'comentario'})
@@ -13,3 +13,7 @@ def goal(request):
     
     #return HttpResponse('nombre:'+ request.GET['name'])   (SOLUCION CON GET)
     return HttpResponse('nombre:'+ request.POST['name']) # (SOLUCION CON POST)
+
+def widget(request):
+    form = ContactForm()
+    return render(request, 'widget.html', {'form':form})

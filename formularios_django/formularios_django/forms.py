@@ -13,3 +13,15 @@ class CommentForm(forms.Form):
                            required=False
                            )
     comment = forms.CharField()
+
+class ContactForm(forms.Form):
+    name    = forms.CharField(label='Nombre', 
+                              max_length=60,
+                              widget=forms.TextInput(attrs={'class':'input'})
+                              )
+    email   = forms.EmailField(label='eMail', 
+                               max_length=50
+                               )
+    message = forms.CharField(label='Mensaje'
+                              )
+    
